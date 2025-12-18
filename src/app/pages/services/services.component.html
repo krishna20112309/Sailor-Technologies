@@ -1,0 +1,118 @@
+<section class="service-hero">
+  <div class="service-hero__container">
+
+    <h1 class="service-title">
+      Software <span>Services</span>
+    </h1>
+
+    <p class="service-subtitle">
+      We help businesses make the right technology decisions,
+      reduce risk, and build scalable digital solutions
+      with expert software consulting.
+    </p>
+
+    <div class="service-actions">
+      <a routerLink="/lets-talk" class="btn-primary">
+        Talk to Our Experts →
+      </a>
+
+      <a routerLink="/services" class="btn-secondary">
+        Explore All Services
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="ai-carousel-section">
+  <h2>Service Excellence – Core Benefits</h2>
+  <p class="subtitle">
+    Service Excellence – Core Benefits
+  </p>
+
+  <div class="carousel-wrapper">
+    <!-- LEFT BUTTON -->
+    <button class="nav-btn left" (click)="scrollLeft()">‹</button>
+
+    <!-- CARD TRACK -->
+    <div class="carousel-track" #carousel>
+      <div
+        class="carousel-card"
+        *ngFor="let item of cards"
+      >
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+
+    <!-- RIGHT BUTTON -->
+    <button class="nav-btn right" (click)="scrollRight()">›</button>
+  </div>
+</section>
+<section class="offer-section">
+  <div class="offer-header">
+    <span class="tag">What We Offer</span>
+    <h2>End-to-End Service Capabilities</h2>
+    <p>
+      We provide a complete suite of services designed to help businesses
+      innovate, scale, and lead their market.
+    </p>
+  </div>
+
+  <div class="offer-grid">
+    <div
+      class="offer-card"
+      *ngFor="let offer of offers"
+    >
+      <div class="icon">
+        {{ offer.icon }}
+      </div>
+
+      <h3>{{ offer.title }}</h3>
+      <p>{{ offer.description }}</p>
+
+      <a class="learn-more">
+        Learn More →
+      </a>
+    </div>
+  </div>
+</section>
+<section class="cta-strip">
+  <div class="cta-content">
+    <h2>
+      Ready to Build Something
+      <span>Powerful & Scalable?</span>
+    </h2>
+
+    <p>
+      Partner with SailorTech to turn your ideas into high-performance digital
+      products that scale with your business.
+    </p>
+
+    <a routerLink="/lets-talk" class="cta-btn">
+      Let’s Talk →
+    </a>
+  </div>
+</section>
+<section class="process-section">
+  <div class="process-header">
+    <span class="subtitle">Our Process</span>
+    <h2>
+      From <span>Discovery</span> to <span>Delivery</span>
+    </h2>
+    <p>
+      A proven, transparent process that ensures quality, speed,
+      and measurable results at every stage.
+    </p>
+  </div>
+
+  <div class="process-steps">
+    <div class="process-card" *ngFor="let step of steps; index as i">
+      <div class="step-badge">{{ i + 1 }}</div>
+
+      <h3>{{ step.title }}</h3>
+      <p>{{ step.description }}</p>
+    </div>
+  </div>
+</section>
+<app-faq></app-faq>

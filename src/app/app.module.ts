@@ -7,6 +7,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { CommonModule } from '@angular/common';
+import { ServicesComponent } from './pages/services/services.component';
+import { FaqComponent } from './pages/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,9 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     HeaderComponent,
     FooterComponent,
+    ServicesComponent,
+    FaqComponent,
+
     CommonModule
   ],
   providers: [],

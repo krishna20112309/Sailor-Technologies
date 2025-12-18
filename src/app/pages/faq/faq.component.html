@@ -1,0 +1,28 @@
+<section class="faq-section">
+  <div class="faq-header">
+    <h2>Frequently Asked Questions</h2>
+    <p>
+      Everything you need to know before starting your project with SailorTech.
+    </p>
+  </div>
+
+  <div class="faq-list">
+    <div
+      class="faq-item"
+      *ngFor="let faq of faqs; let i = index"
+      (click)="toggleFaq(i)"
+      [class.active]="activeIndex === i"
+    >
+      <div class="faq-question">
+        <h3>{{ faq.question }}</h3>
+        <span class="icon">
+          {{ activeIndex === i ? '−' : '+' }}
+        </span>
+      </div>
+
+      <div class="faq-answer">
+        <p>{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+</section>
