@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ServicePageComponent } from './pages/services/service-page/service-page.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
         m => m.ServicesComponent
       ),
   },
+  {
+  path: 'services/:slug',
+  component: ServicePageComponent
+  }
 ];
 
 @NgModule({

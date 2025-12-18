@@ -1,0 +1,126 @@
+<!-- HERO -->
+<section class="service-hero">
+
+  <!-- Animated circle -->
+  <div class="circle-wrap">
+    <svg class="circle-svg" viewBox="0 0 300 300">
+      <circle
+        cx="150"
+        cy="150"
+        r="135"
+        fill="none"
+        stroke="url(#grad)"
+        stroke-width="2"
+        stroke-dasharray="6 10"
+      />
+      <defs>
+        <linearGradient id="grad" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#9f5bff" />
+          <stop offset="100%" stop-color="#ff2d7a" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <h1>{{ service.title }}</h1>
+    <p>{{ service.subtitle }}</p>
+
+    <ul>
+      <li *ngFor="let point of service.heroPoints">
+        <span>✔</span> {{ point }}
+      </li>
+    </ul>
+
+    <button class="primary-btn" routerLink="/lets-talk">
+      {{ service.cta }} →
+    </button>
+  </div>
+
+</section>
+
+
+<!-- WHAT WE OFFER -->
+<section class="service-offers">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="tag">What We Offer</span>
+      <h2>Powerful solutions tailored for your business</h2>
+      <p>
+        From strategy to execution, we provide end-to-end services
+        designed to accelerate growth and digital transformation.
+      </p>
+    </div>
+
+    <div class="offer-grid">
+      <div
+        class="offer-card"
+        *ngFor="let item of service.offers"
+      >
+        <div class="icon-badge">✓</div>
+
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.desc }}</p>
+
+        <span class="cta">Explore →</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="cta-content">
+    <h2>
+      Ready to Build Something
+      <span>Powerful & Scalable?</span>
+    </h2>
+
+    <p>
+      Partner with SailorTech to turn your ideas into high-performance digital
+      products that scale with your business.
+    </p>
+
+    <a routerLink="/lets-talk" class="cta-btn">
+      Let’s Talk →
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="service-process">
+  <div class="container">
+
+    <div class="process-header">
+      <span class="tag">Our Process</span>
+      <h2>From Idea to Successful Delivery</h2>
+      <p>
+        A transparent and structured approach that ensures quality,
+        speed, and measurable outcomes at every stage.
+      </p>
+    </div>
+
+    <div class="process-steps">
+      <div
+        class="process-card"
+        *ngFor="let step of service.process; let i = index"
+      >
+        <div class="step-badge">
+          {{ i + 1 }}
+        </div>
+
+        <h3>{{ step }}</h3>
+        <p>
+          We ensure this phase is executed with precision,
+          collaboration, and best practices.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+

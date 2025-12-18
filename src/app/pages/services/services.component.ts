@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { FooterComponent } from "../footer/footer.component";
 import { FaqComponent } from "../faq/faq.component";
 
 @Component({
   selector: 'app-services',
   standalone:true,
-  imports: [CommonModule, FooterComponent, FaqComponent],
+  imports: [CommonModule, FaqComponent,RouterModule],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss']
 })
@@ -56,29 +56,29 @@ export class ServicesComponent {
 
   cards = [
     {
-      title: 'Customized Dining',
+      title: 'Strategy-Driven Solutions',
       description:
-        'AI delivers personalized menus, dynamic pricing, and tailored offers for customers.'
+        'We align technology with your business goals through deep analysis, planning, and expert consulting to ensure long-term success.'
     },
     {
-      title: 'Streamlined Operations',
+      title: 'Scalable Architecture',
       description:
-        'Automated inventory, smart reordering, and staff optimization reduce waste.'
+        'Our solutions are built to grow with your business, ensuring performance, security, and flexibility at every stage.'
     },
     {
-      title: 'Customer Support',
+      title: 'Seamless User Experience',
       description:
-        'AI chatbots provide instant help while sentiment analysis improves service.'
+        'We design intuitive, high-performance interfaces that enhance engagement and deliver exceptional user satisfaction.'
     },
     {
-      title: 'Predictive Solutions',
+      title: 'Smart Automation & Efficiency',
       description:
-        'AI forecasts demand, prevents downtime, and controls operational costs.'
+        'We design intuitive, high-performance interfaces that enhance engagement and deliver exceptional user satisfaction.'
     },
     {
-      title: 'Data-Driven Insights',
+      title: 'Data-Driven Decisions',
       description:
-        'Advanced analytics help owners make faster and smarter decisions.'
+        'Leverage analytics and insights to optimize performance, improve outcomes, and make informed business decisions.'
     }
   ];
 
@@ -96,43 +96,45 @@ export class ServicesComponent {
     });
   }
 offers = [
-    {
-      icon: '⚙️',
-      title: 'Custom Software Development',
-      description:
-        'Tailored software solutions built to match your business goals and scale effortlessly.'
-    },
-    {
-      icon: '☁️',
-      title: 'Cloud & DevOps',
-      description:
-        'Cloud-native architectures, CI/CD pipelines, and performance optimization.'
-    },
-    {
-      icon: '🎨',
-      title: 'UI/UX Design',
-      description:
-        'Human-centered design that improves usability, engagement, and conversions.'
-    },
-    {
-      icon: '🧠',
-      title: 'AI & Data Analytics',
-      description:
-        'Intelligent systems powered by machine learning and real-time analytics.'
-    },
-    {
-      icon: '🔒',
-      title: 'Security & Compliance',
-      description:
-        'Enterprise-grade security, audits, and compliance-ready systems.'
-    },
-    {
-      icon: '🛠️',
-      title: 'Maintenance & Support',
-      description:
-        'Ongoing support, monitoring, and continuous improvement for long-term success.'
-    }
-  ];
+  {
+    title: 'Software Consulting',
+    description: 'Expert guidance to plan, architect, and scale software solutions.',
+    icon: '🧠',
+    slug: 'software-consulting'
+  },
+  {
+    title: 'Web Development',
+    description: 'High-performance, scalable web applications with modern UX.',
+    icon: '🌐',
+    slug: 'web-development'
+  },
+  {
+    title: 'Mobile App Development',
+    description: 'iOS & Android apps engineered for growth and engagement.',
+    icon: '📱',
+    slug: 'mobile-app-development'
+  },
+  {
+    title: 'AI Solutions',
+    description: 'Intelligent AI-driven systems to automate and optimize operations.',
+    icon: '🤖',
+    slug: 'ai-solutions'
+  },
+  {
+    title: 'ERP Software Development',
+    description: 'Custom ERP solutions to unify, automate, and control business processes.',
+    icon: '🏢',
+    slug: 'erp-software-development'
+  },
+  {
+    title: 'Product Development',
+    description: 'End-to-end product development from idea to market launch.',
+    icon: '🚀',
+    slug: 'product-development'
+  }
+];
+
+
   steps = [
     {
       title: 'Discovery',

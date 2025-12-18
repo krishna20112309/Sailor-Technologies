@@ -27,7 +27,7 @@
 <section class="ai-carousel-section">
   <h2>Service Excellence – Core Benefits</h2>
   <p class="subtitle">
-    Service Excellence – Core Benefits
+    Empower your business with scalable, secure, and future-ready digital solutions designed to deliver real impact.
   </p>
 
   <div class="carousel-wrapper">
@@ -44,10 +44,10 @@
         <p>{{ item.description }}</p>
       </div>
     </div>
-
     <!-- RIGHT BUTTON -->
     <button class="nav-btn right" (click)="scrollRight()">›</button>
   </div>
+      <div class="caption">Trusted by startups and enterprises to deliver reliable, high-impact digital solutions.</div>
 </section>
 <section class="offer-section">
   <div class="offer-header">
@@ -63,6 +63,8 @@
     <div
       class="offer-card"
       *ngFor="let offer of offers"
+      [routerLink]="['/services', offer.slug]"
+      role="button"
     >
       <div class="icon">
         {{ offer.icon }}

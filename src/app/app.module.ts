@@ -9,10 +9,12 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { ServicesComponent } from './pages/services/services.component';
 import { FaqComponent } from './pages/faq/faq.component';
+import { ServicePageComponent } from './pages/services/service-page/service-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ServicePageComponent,
     
   ],
   imports: [
