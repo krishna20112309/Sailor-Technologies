@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sailor-technologies",
+            "outputPath": "dist/sailor-website-technologies/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
